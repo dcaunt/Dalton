@@ -1,0 +1,3 @@
+[submodule "Ono"]
+	path = Ono
+	url = git@github.com:mattt/Ono.git

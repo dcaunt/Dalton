@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:Dalton"
+      name = "Dalton">
+      <FileRef
+         location = "group:DLTAtomFeed.h">
+      </FileRef>
+      <FileRef
+         location = "group:DLTAtomFeed.m">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:../Ono/Ono"
+      name = "Ono">
+      <FileRef
+         location = "group:Ono.h">
+      </FileRef>
+      <FileRef
+         location = "group:ONOXMLDocument.h">
+      </FileRef>
+      <FileRef
+         location = "group:ONOXMLDocument.m">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:Example/Dalton Example.xcodeproj">
+   </FileRef>
+</Workspace>
