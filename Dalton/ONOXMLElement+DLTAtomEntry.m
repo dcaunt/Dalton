@@ -1,4 +1,4 @@
-// DLTAtomFeed.m
+// ONOXMLElement+DLTAtomEntry.m
 //
 // Copyright (c) 2014 David Caunt (http://davidcaunt.co.uk/)
 //
@@ -20,24 +20,31 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-#import "DLTAtomFeed.h"
+#import "ONOXMLElement+DLTAtomEntry.h"
 
-@implementation DLTAtomFeed
+@implementation ONOXMLElement (DLTAtomEntry)
 
 - (NSString *)title {
-    return [[self.rootElement firstChildWithTag:@"title"] stringValue];
+    return [[self firstChildWithTag:@"title"] stringValue];
 }
 
-- (NSString *)subtitle {
-    return [[self.rootElement firstChildWithTag:@"subtitle"] stringValue];
+- (NSURL *)link {
+    ONOXMLElement *link = nil;
+    for (ONOXMLElement *element in [self childrenWithTag:@"link"]) {
+        if (element[@"rel"] == nil) {
+            link = element;
+            break;
+        }
+    }
+    if (link != nil) {
+        return [NSURL URLWithString:link[@"href"]];
+    }
+
+    return nil;
 }
 
 - (NSDate *)updated {
-    return [[self.rootElement firstChildWithTag:@"updated"] dateValue];
-}
-
-- (NSArray *)entries {
-    return [self.rootElement childrenWithTag:@"entry"];
+    return [[self firstChildWithTag:@"updated"] dateValue];
 }
 
 @end

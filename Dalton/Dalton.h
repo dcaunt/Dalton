@@ -1,4 +1,4 @@
-// DLTAtomFeed.m
+// Dalton.h
 //
 // Copyright (c) 2014 David Caunt (http://davidcaunt.co.uk/)
 //
@@ -20,24 +20,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-#import "DLTAtomFeed.h"
+#ifndef __Dalton__
+    #import "DLTAtomFeed.h"
+    #import "ONOXMLElement+DLTAtomEntry.h"
 
-@implementation DLTAtomFeed
-
-- (NSString *)title {
-    return [[self.rootElement firstChildWithTag:@"title"] stringValue];
-}
-
-- (NSString *)subtitle {
-    return [[self.rootElement firstChildWithTag:@"subtitle"] stringValue];
-}
-
-- (NSDate *)updated {
-    return [[self.rootElement firstChildWithTag:@"updated"] dateValue];
-}
-
-- (NSArray *)entries {
-    return [self.rootElement childrenWithTag:@"entry"];
-}
-
-@end
+    #define __Dalton__
+#endif

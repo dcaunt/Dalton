@@ -5,10 +5,19 @@
       location = "group:Dalton"
       name = "Dalton">
       <FileRef
+         location = "group:Dalton.h">
+      </FileRef>
+      <FileRef
          location = "group:DLTAtomFeed.h">
       </FileRef>
       <FileRef
          location = "group:DLTAtomFeed.m">
+      </FileRef>
+      <FileRef
+         location = "group:ONOXMLElement+DLTAtomEntry.h">
+      </FileRef>
+      <FileRef
+         location = "group:ONOXMLElement+DLTAtomEntry.m">
       </FileRef>
    </Group>
    <Group

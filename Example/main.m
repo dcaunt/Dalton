@@ -21,11 +21,25 @@
 // SOFTWARE.
 
 #import <Foundation/Foundation.h>
+#import "Dalton.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
-        NSLog(@"Hello, World!");
+        NSError *error = nil;
+        NSString *XMLFilePath = [[@(__FILE__) stringByDeletingLastPathComponent] stringByAppendingPathComponent:@"sample.xml"];
+        DLTAtomFeed *document = [DLTAtomFeed XMLDocumentWithData:[NSData dataWithContentsOfFile:XMLFilePath] error:&error];
+        if (error) {
+            NSLog(@"[Error] %@", error);
+            return 0;
+        }
+
+        NSLog(@"Doc is %@", document);
+        NSLog(@"Title is %@", document.title);
+        NSLog(@"Updated at %@", document.updated);
+        for (ONOXMLElement *entry in document.entries) {
+            NSLog(@"Entry title is %@ link is %@ updated at %@", entry.title, entry.link, entry.updated);
+        }
     }
     return 0;
 }

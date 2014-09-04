@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		BF1A813F19B7A12E00946C8D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1A813E19B7A12E00946C8D /* main.m */; };
+		BF1A814519B7A34800946C8D /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1A814419B7A34800946C8D /* libxml2.dylib */; };
+		BF1A814719B7A35400946C8D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1A814619B7A35400946C8D /* Foundation.framework */; };
+		BF1A814B19B7A58400946C8D /* DLTAtomFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1A814A19B7A58400946C8D /* DLTAtomFeed.m */; };
+		BF1A815019B7A5A400946C8D /* ONOXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1A814F19B7A5A400946C8D /* ONOXMLDocument.m */; };
+		BF91A98119B88FA600ABE0E9 /* ONOXMLElement+DLTAtomEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = BF91A98019B88FA600ABE0E9 /* ONOXMLElement+DLTAtomEntry.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +30,17 @@
 /* Begin PBXFileReference section */
 		BF1A813419B78B1900946C8D /* Dalton Example */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Dalton Example"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF1A813E19B7A12E00946C8D /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
+		BF1A814119B7A2B100946C8D /* sample.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = sample.xml; sourceTree = "<group>"; };
+		BF1A814419B7A34800946C8D /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		BF1A814619B7A35400946C8D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BF1A814919B7A58400946C8D /* DLTAtomFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLTAtomFeed.h; path = ../Dalton/DLTAtomFeed.h; sourceTree = "<group>"; };
+		BF1A814A19B7A58400946C8D /* DLTAtomFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DLTAtomFeed.m; path = ../Dalton/DLTAtomFeed.m; sourceTree = "<group>"; };
+		BF1A814D19B7A5A400946C8D /* Ono.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Ono.h; path = ../../Ono/Ono/Ono.h; sourceTree = "<group>"; };
+		BF1A814E19B7A5A400946C8D /* ONOXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ONOXMLDocument.h; path = ../../Ono/Ono/ONOXMLDocument.h; sourceTree = "<group>"; };
+		BF1A814F19B7A5A400946C8D /* ONOXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ONOXMLDocument.m; path = ../../Ono/Ono/ONOXMLDocument.m; sourceTree = "<group>"; };
+		BF2C9FC919B8F80100E4D933 /* Dalton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Dalton.h; path = ../Dalton/Dalton.h; sourceTree = "<group>"; };
+		BF91A97F19B88FA600ABE0E9 /* ONOXMLElement+DLTAtomEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ONOXMLElement+DLTAtomEntry.h"; path = "../Dalton/ONOXMLElement+DLTAtomEntry.h"; sourceTree = "<group>"; };
+		BF91A98019B88FA600ABE0E9 /* ONOXMLElement+DLTAtomEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ONOXMLElement+DLTAtomEntry.m"; path = "../Dalton/ONOXMLElement+DLTAtomEntry.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +48,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF1A814719B7A35400946C8D /* Foundation.framework in Frameworks */,
+				BF1A814519B7A34800946C8D /* libxml2.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,8 +59,12 @@
 		BF1A812B19B78B1900946C8D = {
 			isa = PBXGroup;
 			children = (
+				BF1A814619B7A35400946C8D /* Foundation.framework */,
+				BF1A814419B7A34800946C8D /* libxml2.dylib */,
 				BF1A813619B78B1900946C8D /* Example */,
+				BF1A814019B7A2A000946C8D /* Resources */,
 				BF1A813519B78B1900946C8D /* Products */,
+				BF1A814819B7A56000946C8D /* Vendor */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +83,37 @@
 			);
 			name = Example;
 			path = "Dalton Example";
+			sourceTree = "<group>";
+		};
+		BF1A814019B7A2A000946C8D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BF1A814119B7A2B100946C8D /* sample.xml */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		BF1A814819B7A56000946C8D /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				BF1A814C19B7A59600946C8D /* Ono */,
+				BF2C9FC919B8F80100E4D933 /* Dalton.h */,
+				BF1A814919B7A58400946C8D /* DLTAtomFeed.h */,
+				BF1A814A19B7A58400946C8D /* DLTAtomFeed.m */,
+				BF91A97F19B88FA600ABE0E9 /* ONOXMLElement+DLTAtomEntry.h */,
+				BF91A98019B88FA600ABE0E9 /* ONOXMLElement+DLTAtomEntry.m */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		BF1A814C19B7A59600946C8D /* Ono */ = {
+			isa = PBXGroup;
+			children = (
+				BF1A814D19B7A5A400946C8D /* Ono.h */,
+				BF1A814E19B7A5A400946C8D /* ONOXMLDocument.h */,
+				BF1A814F19B7A5A400946C8D /* ONOXMLDocument.m */,
+			);
+			name = Ono;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +172,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF91A98119B88FA600ABE0E9 /* ONOXMLElement+DLTAtomEntry.m in Sources */,
+				BF1A814B19B7A58400946C8D /* DLTAtomFeed.m in Sources */,
+				BF1A815019B7A5A400946C8D /* ONOXMLDocument.m in Sources */,
 				BF1A813F19B7A12E00946C8D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,6 +259,11 @@
 		BF1A813C19B78B1900946C8D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Applications/Xcode6-Beta7.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+					"$(SDK_DIR)\"/usr/include/libxml2",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -210,6 +271,11 @@
 		BF1A813D19B78B1900946C8D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Applications/Xcode6-Beta7.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+					"$(SDK_DIR)\"/usr/include/libxml2",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -23,5 +23,8 @@
 #import "Ono.h"
 
 @interface DLTAtomFeed : ONOXMLDocument
-
+@property (nonatomic, copy, readonly) NSString *title;
+@property (nonatomic, copy, readonly) NSString *subtitle;
+@property (nonatomic, copy, readonly) NSDate *updated;
+@property (nonatomic, copy, readonly) NSArray *entries;
 @end
