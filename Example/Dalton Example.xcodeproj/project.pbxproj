@@ -12,6 +12,7 @@
 		BF1A814719B7A35400946C8D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1A814619B7A35400946C8D /* Foundation.framework */; };
 		BF1A814B19B7A58400946C8D /* DLTAtomFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1A814A19B7A58400946C8D /* DLTAtomFeed.m */; };
 		BF1A815019B7A5A400946C8D /* ONOXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1A814F19B7A5A400946C8D /* ONOXMLDocument.m */; };
+		BF2C9FF119B9107600E4D933 /* Dalton_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2C9FF019B9107600E4D933 /* Dalton_Tests.m */; };
 		BF91A98119B88FA600ABE0E9 /* ONOXMLElement+DLTAtomEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = BF91A98019B88FA600ABE0E9 /* ONOXMLElement+DLTAtomEntry.m */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,13 @@
 		BF1A814E19B7A5A400946C8D /* ONOXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ONOXMLDocument.h; path = ../../Ono/Ono/ONOXMLDocument.h; sourceTree = "<group>"; };
 		BF1A814F19B7A5A400946C8D /* ONOXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ONOXMLDocument.m; path = ../../Ono/Ono/ONOXMLDocument.m; sourceTree = "<group>"; };
 		BF2C9FC919B8F80100E4D933 /* Dalton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Dalton.h; path = ../Dalton/Dalton.h; sourceTree = "<group>"; };
+		BF2C9FD119B90C3400E4D933 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF2C9FD219B90C3400E4D933 /* DaltonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DaltonTests.m; sourceTree = "<group>"; };
+		BF2C9FE019B90E1C00E4D933 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF2C9FE119B90E1C00E4D933 /* Dalton_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dalton_Tests.m; sourceTree = "<group>"; };
+		BF2C9FEC19B9107600E4D933 /* Dalton Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dalton Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF2C9FEF19B9107600E4D933 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF2C9FF019B9107600E4D933 /* Dalton_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dalton_Tests.m; sourceTree = "<group>"; };
 		BF91A97F19B88FA600ABE0E9 /* ONOXMLElement+DLTAtomEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ONOXMLElement+DLTAtomEntry.h"; path = "../Dalton/ONOXMLElement+DLTAtomEntry.h"; sourceTree = "<group>"; };
 		BF91A98019B88FA600ABE0E9 /* ONOXMLElement+DLTAtomEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ONOXMLElement+DLTAtomEntry.m"; path = "../Dalton/ONOXMLElement+DLTAtomEntry.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,6 +61,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BF2C9FE919B9107600E4D933 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -63,6 +78,9 @@
 				BF1A814419B7A34800946C8D /* libxml2.dylib */,
 				BF1A813619B78B1900946C8D /* Example */,
 				BF1A814019B7A2A000946C8D /* Resources */,
+				BF2C9FCF19B90C3400E4D933 /* DaltonTests */,
+				BF2C9FDE19B90E1C00E4D933 /* Dalton Tests */,
+				BF2C9FED19B9107600E4D933 /* Dalton Tests */,
 				BF1A813519B78B1900946C8D /* Products */,
 				BF1A814819B7A56000946C8D /* Vendor */,
 			);
@@ -72,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				BF1A813419B78B1900946C8D /* Dalton Example */,
+				BF2C9FEC19B9107600E4D933 /* Dalton Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,6 +135,57 @@
 			name = Ono;
 			sourceTree = "<group>";
 		};
+		BF2C9FCF19B90C3400E4D933 /* DaltonTests */ = {
+			isa = PBXGroup;
+			children = (
+				BF2C9FD219B90C3400E4D933 /* DaltonTests.m */,
+				BF2C9FD019B90C3400E4D933 /* Supporting Files */,
+			);
+			path = DaltonTests;
+			sourceTree = "<group>";
+		};
+		BF2C9FD019B90C3400E4D933 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BF2C9FD119B90C3400E4D933 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BF2C9FDE19B90E1C00E4D933 /* Dalton Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BF2C9FE119B90E1C00E4D933 /* Dalton_Tests.m */,
+				BF2C9FDF19B90E1C00E4D933 /* Supporting Files */,
+			);
+			path = "Dalton Tests";
+			sourceTree = "<group>";
+		};
+		BF2C9FDF19B90E1C00E4D933 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BF2C9FE019B90E1C00E4D933 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BF2C9FED19B9107600E4D933 /* Dalton Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BF2C9FF019B9107600E4D933 /* Dalton_Tests.m */,
+				BF2C9FEE19B9107600E4D933 /* Supporting Files */,
+			);
+			path = "Dalton Tests";
+			sourceTree = "<group>";
+		};
+		BF2C9FEE19B9107600E4D933 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BF2C9FEF19B9107600E4D933 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -136,6 +206,23 @@
 			productReference = BF1A813419B78B1900946C8D /* Dalton Example */;
 			productType = "com.apple.product-type.tool";
 		};
+		BF2C9FEB19B9107600E4D933 /* Dalton Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF2C9FF219B9107600E4D933 /* Build configuration list for PBXNativeTarget "Dalton Tests" */;
+			buildPhases = (
+				BF2C9FE819B9107600E4D933 /* Sources */,
+				BF2C9FE919B9107600E4D933 /* Frameworks */,
+				BF2C9FEA19B9107600E4D933 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Dalton Tests";
+			productName = "Dalton Tests";
+			productReference = BF2C9FEC19B9107600E4D933 /* Dalton Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -146,6 +233,9 @@
 				ORGANIZATIONNAME = "David Caunt";
 				TargetAttributes = {
 					BF1A813319B78B1900946C8D = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					BF2C9FEB19B9107600E4D933 = {
 						CreatedOnToolsVersion = 6.0;
 					};
 				};
@@ -163,9 +253,20 @@
 			projectRoot = "";
 			targets = (
 				BF1A813319B78B1900946C8D /* Dalton Example */,
+				BF2C9FEB19B9107600E4D933 /* Dalton Tests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF2C9FEA19B9107600E4D933 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BF1A813019B78B1900946C8D /* Sources */ = {
@@ -176,6 +277,14 @@
 				BF1A814B19B7A58400946C8D /* DLTAtomFeed.m in Sources */,
 				BF1A815019B7A5A400946C8D /* ONOXMLDocument.m in Sources */,
 				BF1A813F19B7A12E00946C8D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF2C9FE819B9107600E4D933 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF2C9FF119B9107600E4D933 /* Dalton_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +389,38 @@
 			};
 			name = Release;
 		};
+		BF2C9FF319B9107600E4D933 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Dalton Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BF2C9FF419B9107600E4D933 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Dalton Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -300,6 +441,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		BF2C9FF219B9107600E4D933 /* Build configuration list for PBXNativeTarget "Dalton Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF2C9FF319B9107600E4D933 /* Debug */,
+				BF2C9FF419B9107600E4D933 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

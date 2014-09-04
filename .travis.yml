@@ -1,0 +1,4 @@
+language: objective-c
+xcode_workspace: Dalton.xcworkspace
+xcode_scheme: Dalton Example
+xcode_sdk: macosx
