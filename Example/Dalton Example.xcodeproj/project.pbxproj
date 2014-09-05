@@ -11,8 +11,8 @@
 		BF1A814519B7A34800946C8D /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1A814419B7A34800946C8D /* libxml2.dylib */; };
 		BF1A814719B7A35400946C8D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1A814619B7A35400946C8D /* Foundation.framework */; };
 		BF1A814B19B7A58400946C8D /* DLTAtomFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1A814A19B7A58400946C8D /* DLTAtomFeed.m */; };
-		BF1A815019B7A5A400946C8D /* ONOXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1A814F19B7A5A400946C8D /* ONOXMLDocument.m */; };
 		BF2C9FF119B9107600E4D933 /* Dalton_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2C9FF019B9107600E4D933 /* Dalton_Tests.m */; };
+		BF2C9FF919B9C12A00E4D933 /* ONOXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2C9FF719B9C12A00E4D933 /* ONOXMLDocument.m */; };
 		BF91A98119B88FA600ABE0E9 /* ONOXMLElement+DLTAtomEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = BF91A98019B88FA600ABE0E9 /* ONOXMLElement+DLTAtomEntry.m */; };
 /* End PBXBuildFile section */
 
@@ -36,9 +36,6 @@
 		BF1A814619B7A35400946C8D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BF1A814919B7A58400946C8D /* DLTAtomFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLTAtomFeed.h; path = ../Dalton/DLTAtomFeed.h; sourceTree = "<group>"; };
 		BF1A814A19B7A58400946C8D /* DLTAtomFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DLTAtomFeed.m; path = ../Dalton/DLTAtomFeed.m; sourceTree = "<group>"; };
-		BF1A814D19B7A5A400946C8D /* Ono.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Ono.h; path = ../../Ono/Ono/Ono.h; sourceTree = "<group>"; };
-		BF1A814E19B7A5A400946C8D /* ONOXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ONOXMLDocument.h; path = ../../Ono/Ono/ONOXMLDocument.h; sourceTree = "<group>"; };
-		BF1A814F19B7A5A400946C8D /* ONOXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ONOXMLDocument.m; path = ../../Ono/Ono/ONOXMLDocument.m; sourceTree = "<group>"; };
 		BF2C9FC919B8F80100E4D933 /* Dalton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Dalton.h; path = ../Dalton/Dalton.h; sourceTree = "<group>"; };
 		BF2C9FD119B90C3400E4D933 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF2C9FD219B90C3400E4D933 /* DaltonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DaltonTests.m; sourceTree = "<group>"; };
@@ -47,6 +44,9 @@
 		BF2C9FEC19B9107600E4D933 /* Dalton Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dalton Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF2C9FEF19B9107600E4D933 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF2C9FF019B9107600E4D933 /* Dalton_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dalton_Tests.m; sourceTree = "<group>"; };
+		BF2C9FF519B9C12A00E4D933 /* Ono.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ono.h; sourceTree = "<group>"; };
+		BF2C9FF619B9C12A00E4D933 /* ONOXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ONOXMLDocument.h; sourceTree = "<group>"; };
+		BF2C9FF719B9C12A00E4D933 /* ONOXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ONOXMLDocument.m; sourceTree = "<group>"; };
 		BF91A97F19B88FA600ABE0E9 /* ONOXMLElement+DLTAtomEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ONOXMLElement+DLTAtomEntry.h"; path = "../Dalton/ONOXMLElement+DLTAtomEntry.h"; sourceTree = "<group>"; };
 		BF91A98019B88FA600ABE0E9 /* ONOXMLElement+DLTAtomEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ONOXMLElement+DLTAtomEntry.m"; path = "../Dalton/ONOXMLElement+DLTAtomEntry.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,7 +115,7 @@
 		BF1A814819B7A56000946C8D /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				BF1A814C19B7A59600946C8D /* Ono */,
+				BF2C9FF819B9C12A00E4D933 /* Ono */,
 				BF2C9FC919B8F80100E4D933 /* Dalton.h */,
 				BF1A814919B7A58400946C8D /* DLTAtomFeed.h */,
 				BF1A814A19B7A58400946C8D /* DLTAtomFeed.m */,
@@ -123,16 +123,6 @@
 				BF91A98019B88FA600ABE0E9 /* ONOXMLElement+DLTAtomEntry.m */,
 			);
 			name = Vendor;
-			sourceTree = "<group>";
-		};
-		BF1A814C19B7A59600946C8D /* Ono */ = {
-			isa = PBXGroup;
-			children = (
-				BF1A814D19B7A5A400946C8D /* Ono.h */,
-				BF1A814E19B7A5A400946C8D /* ONOXMLDocument.h */,
-				BF1A814F19B7A5A400946C8D /* ONOXMLDocument.m */,
-			);
-			name = Ono;
 			sourceTree = "<group>";
 		};
 		BF2C9FCF19B90C3400E4D933 /* DaltonTests */ = {
@@ -184,6 +174,17 @@
 				BF2C9FEF19B9107600E4D933 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BF2C9FF819B9C12A00E4D933 /* Ono */ = {
+			isa = PBXGroup;
+			children = (
+				BF2C9FF519B9C12A00E4D933 /* Ono.h */,
+				BF2C9FF619B9C12A00E4D933 /* ONOXMLDocument.h */,
+				BF2C9FF719B9C12A00E4D933 /* ONOXMLDocument.m */,
+			);
+			name = Ono;
+			path = ../Ono/Ono;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,8 +276,8 @@
 			files = (
 				BF91A98119B88FA600ABE0E9 /* ONOXMLElement+DLTAtomEntry.m in Sources */,
 				BF1A814B19B7A58400946C8D /* DLTAtomFeed.m in Sources */,
-				BF1A815019B7A5A400946C8D /* ONOXMLDocument.m in Sources */,
 				BF1A813F19B7A12E00946C8D /* main.m in Sources */,
+				BF2C9FF919B9C12A00E4D933 /* ONOXMLDocument.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

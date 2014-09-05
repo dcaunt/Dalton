@@ -21,7 +21,7 @@
       </FileRef>
    </Group>
    <Group
-      location = "group:../Ono/Ono"
+      location = "group:Ono/Ono"
       name = "Ono">
       <FileRef
          location = "group:Ono.h">
