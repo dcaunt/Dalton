@@ -1,5 +1,5 @@
-// DLTAtomFeed.h
-//  
+// DLTFeedEntry.h
+//
 // Copyright (c) 2014 David Caunt (http://davidcaunt.co.uk/)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -20,8 +20,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-#import "DLTFeed.h"
+#import <Foundation/Foundation.h>
 
-@interface DLTAtomFeed : NSObject <DLTFeed>
-
+@protocol DLTFeedEntry <NSObject>
+@property (nonatomic, copy, readonly) NSString *title;
+@property (nonatomic, copy, readonly) NSDate *updated;
+@property (nonatomic, copy, readonly) NSString *identifier;
+@property (nonatomic, copy, readonly) NSURL *link;
 @end

@@ -13,7 +13,8 @@
 		BF1A814B19B7A58400946C8D /* DLTAtomFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1A814A19B7A58400946C8D /* DLTAtomFeed.m */; };
 		BF2C9FF119B9107600E4D933 /* Dalton_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2C9FF019B9107600E4D933 /* Dalton_Tests.m */; };
 		BF2C9FF919B9C12A00E4D933 /* ONOXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2C9FF719B9C12A00E4D933 /* ONOXMLDocument.m */; };
-		BF91A98119B88FA600ABE0E9 /* ONOXMLElement+DLTAtomEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = BF91A98019B88FA600ABE0E9 /* ONOXMLElement+DLTAtomEntry.m */; };
+		BF33251319FEDECB0066C378 /* DLTRSSFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = BF33251219FEDECB0066C378 /* DLTRSSFeed.m */; };
+		BF79750419C9D83C0049F990 /* DLTFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = BF79750319C9D83C0049F990 /* DLTFeed.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,8 +48,11 @@
 		BF2C9FF519B9C12A00E4D933 /* Ono.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ono.h; sourceTree = "<group>"; };
 		BF2C9FF619B9C12A00E4D933 /* ONOXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ONOXMLDocument.h; sourceTree = "<group>"; };
 		BF2C9FF719B9C12A00E4D933 /* ONOXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ONOXMLDocument.m; sourceTree = "<group>"; };
-		BF91A97F19B88FA600ABE0E9 /* ONOXMLElement+DLTAtomEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ONOXMLElement+DLTAtomEntry.h"; path = "../Dalton/ONOXMLElement+DLTAtomEntry.h"; sourceTree = "<group>"; };
-		BF91A98019B88FA600ABE0E9 /* ONOXMLElement+DLTAtomEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ONOXMLElement+DLTAtomEntry.m"; path = "../Dalton/ONOXMLElement+DLTAtomEntry.m"; sourceTree = "<group>"; };
+		BF33251019FEDD460066C378 /* news.rss */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = news.rss; sourceTree = "<group>"; };
+		BF33251119FEDECB0066C378 /* DLTRSSFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLTRSSFeed.h; path = ../Dalton/DLTRSSFeed.h; sourceTree = "<group>"; };
+		BF33251219FEDECB0066C378 /* DLTRSSFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DLTRSSFeed.m; path = ../Dalton/DLTRSSFeed.m; sourceTree = "<group>"; };
+		BF79750219C9D83C0049F990 /* DLTFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLTFeed.h; path = ../Dalton/DLTFeed.h; sourceTree = "<group>"; };
+		BF79750319C9D83C0049F990 /* DLTFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DLTFeed.m; path = ../Dalton/DLTFeed.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 		BF1A814019B7A2A000946C8D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BF33251019FEDD460066C378 /* news.rss */,
 				BF1A814119B7A2B100946C8D /* sample.xml */,
 			);
 			name = Resources;
@@ -119,8 +124,10 @@
 				BF2C9FC919B8F80100E4D933 /* Dalton.h */,
 				BF1A814919B7A58400946C8D /* DLTAtomFeed.h */,
 				BF1A814A19B7A58400946C8D /* DLTAtomFeed.m */,
-				BF91A97F19B88FA600ABE0E9 /* ONOXMLElement+DLTAtomEntry.h */,
-				BF91A98019B88FA600ABE0E9 /* ONOXMLElement+DLTAtomEntry.m */,
+				BF33251119FEDECB0066C378 /* DLTRSSFeed.h */,
+				BF33251219FEDECB0066C378 /* DLTRSSFeed.m */,
+				BF79750219C9D83C0049F990 /* DLTFeed.h */,
+				BF79750319C9D83C0049F990 /* DLTFeed.m */,
 			);
 			name = Vendor;
 			sourceTree = "<group>";
@@ -274,10 +281,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF91A98119B88FA600ABE0E9 /* ONOXMLElement+DLTAtomEntry.m in Sources */,
 				BF1A814B19B7A58400946C8D /* DLTAtomFeed.m in Sources */,
 				BF1A813F19B7A12E00946C8D /* main.m in Sources */,
+				BF79750419C9D83C0049F990 /* DLTFeed.m in Sources */,
 				BF2C9FF919B9C12A00E4D933 /* ONOXMLDocument.m in Sources */,
+				BF33251319FEDECB0066C378 /* DLTRSSFeed.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +458,7 @@
 				BF2C9FF419B9107600E4D933 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

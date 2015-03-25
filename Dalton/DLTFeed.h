@@ -1,5 +1,5 @@
-// DLTAtomFeed.h
-//  
+// DLTFeed.h
+//
 // Copyright (c) 2014 David Caunt (http://davidcaunt.co.uk/)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -20,8 +20,22 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-#import "DLTFeed.h"
+#import <Foundation/Foundation.h>
+#import "Ono.h"
 
-@interface DLTAtomFeed : NSObject <DLTFeed>
+@protocol DLTFeed <NSObject>
+
+@property (nonatomic, copy, readonly) NSString *title;
+@property (nonatomic, copy, readonly) NSString *subtitle;
+@property (nonatomic, copy, readonly) NSDate *updated;
+@property (nonatomic, copy, readonly) NSArray *entries;
+
+- (instancetype)initWithDocument:(ONOXMLDocument *)document;
+@end
+
+@interface DLTFeed : NSObject
+
++ (id<DLTFeed>)feedWithData:(NSData *)data error:(NSError **)error;
++ (id<DLTFeed>)feedWithDocument:(ONOXMLDocument *)document;
 
 @end

@@ -1,4 +1,4 @@
-// ONOXMLElement+DLTAtomEntry.h
+// DLTFeed.m
 //
 // Copyright (c) 2014 David Caunt (http://davidcaunt.co.uk/)
 //
@@ -20,12 +20,31 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-#import "Ono.h"
+#import "DLTFeed.h"
+#import "DLTAtomFeed.h"
+#import "DLTRSSFeed.h"
 
-@interface ONOXMLElement (DLTAtomEntry)
+@implementation DLTFeed
 
-@property (nonatomic, copy, readonly) NSString *title;
-@property (nonatomic, copy, readonly) NSURL *link;
-@property (nonatomic, copy, readonly) NSDate *updated;
++ (id<DLTFeed>)feedWithData:(NSData *)data error:(NSError **)error {
+    ONOXMLDocument *document = [ONOXMLDocument XMLDocumentWithData:data error:error];
+    if (document == nil) {
+        //TODO: Return an error if a feed could not be created
+        return nil;
+    }
+    return [self feedWithDocument:document];
+}
+
++ (id<DLTFeed>)feedWithDocument:(ONOXMLDocument *)document
+{
+    id<DLTFeed> feed;
+    if ([document.rootElement.tag isEqualToString:@"rss"]) {
+        feed = [[DLTRSSFeed alloc] initWithDocument:document];
+    } else {
+        feed = [[DLTAtomFeed alloc] initWithDocument:document];
+    }
+
+    return feed;
+}
 
 @end

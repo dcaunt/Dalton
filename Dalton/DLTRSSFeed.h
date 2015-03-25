@@ -1,4 +1,4 @@
-// ONOXMLElement+DLTAtomEntry.m
+// DLTRSSFeed.h
 //
 // Copyright (c) 2014 David Caunt (http://davidcaunt.co.uk/)
 //
@@ -20,31 +20,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-#import "ONOXMLElement+DLTAtomEntry.h"
+#import "DLTFeed.h"
 
-@implementation ONOXMLElement (DLTAtomEntry)
-
-- (NSString *)title {
-    return [[self firstChildWithTag:@"title"] stringValue];
-}
-
-- (NSURL *)link {
-    ONOXMLElement *link = nil;
-    for (ONOXMLElement *element in [self childrenWithTag:@"link"]) {
-        if (element[@"rel"] == nil) {
-            link = element;
-            break;
-        }
-    }
-    if (link != nil) {
-        return [NSURL URLWithString:link[@"href"]];
-    }
-
-    return nil;
-}
-
-- (NSDate *)updated {
-    return [[self firstChildWithTag:@"updated"] dateValue];
-}
+@interface DLTRSSFeed : NSObject <DLTFeed>
 
 @end

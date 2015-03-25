@@ -14,10 +14,19 @@
          location = "group:DLTAtomFeed.m">
       </FileRef>
       <FileRef
-         location = "group:ONOXMLElement+DLTAtomEntry.h">
+         location = "group:DLTRSSFeed.h">
       </FileRef>
       <FileRef
-         location = "group:ONOXMLElement+DLTAtomEntry.m">
+         location = "group:DLTRSSFeed.m">
+      </FileRef>
+      <FileRef
+         location = "group:DLTFeed.h">
+      </FileRef>
+      <FileRef
+         location = "group:DLTFeed.m">
+      </FileRef>
+      <FileRef
+         location = "group:DLTFeedEntry.h">
       </FileRef>
    </Group>
    <Group

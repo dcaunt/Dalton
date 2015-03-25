@@ -25,19 +25,19 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
+
         NSError *error = nil;
         NSString *XMLFilePath = [[@(__FILE__) stringByDeletingLastPathComponent] stringByAppendingPathComponent:@"sample.xml"];
-        DLTAtomFeed *document = [DLTAtomFeed XMLDocumentWithData:[NSData dataWithContentsOfFile:XMLFilePath] error:&error];
+        id<DLTFeed> feed = [DLTFeed feedWithData:[NSData dataWithContentsOfFile:XMLFilePath] error:&error];
+
         if (error) {
             NSLog(@"[Error] %@", error);
-            return 0;
+            return 1;
         }
 
-        NSLog(@"Doc is %@", document);
-        NSLog(@"Title is %@", document.title);
-        NSLog(@"Updated at %@", document.updated);
-        for (ONOXMLElement *entry in document.entries) {
+        NSLog(@"Feed title is %@", feed.title);
+        NSLog(@"Feed was last updated at %@", feed.updated);
+        for (id<DLTFeedEntry> entry in feed.entries) {
             NSLog(@"Entry title is %@ link is %@ updated at %@", entry.title, entry.link, entry.updated);
         }
     }

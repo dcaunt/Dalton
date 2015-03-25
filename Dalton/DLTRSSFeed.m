@@ -1,4 +1,4 @@
-// DLTAtomFeed.m
+// DLTRSSFeed.m
 //
 // Copyright (c) 2014 David Caunt (http://davidcaunt.co.uk/)
 //
@@ -20,10 +20,23 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-#import "DLTAtomFeed.h"
+#import "DLTRSSFeed.h"
 #import "DLTFeedEntry.h"
 
-@interface DLTAtomFeedEntry : NSObject <DLTFeedEntry>
+static NSDate * DLTRSSFeedDateFromElement(ONOXMLElement *element) {
+    static NSDateFormatter *dateFormatter = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        dateFormatter = [[NSDateFormatter alloc] init];
+        dateFormatter.dateFormat = @"EEE, dd MMM yyyy HH:mm:ss zzz"; //RFC 2822
+        dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier: @"en_US_POSIX"];
+    });
+
+    NSString *stringValue = [element stringValue];
+    return [dateFormatter dateFromString:stringValue];
+}
+
+@interface DLTRSSFeedEntry : NSObject <DLTFeedEntry>
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSURL *link;
 @property (nonatomic, copy) NSDate *updated;
@@ -31,7 +44,7 @@
 @property (nonatomic, copy) NSDictionary *links;
 @end
 
-@implementation DLTAtomFeedEntry
+@implementation DLTRSSFeedEntry
 
 @synthesize title = _title;
 @synthesize updated = _updated;
@@ -43,39 +56,25 @@
     self = [super init];
     if (self) {
         _title = [[element firstChildWithTag:@"title"] stringValue];
-        _updated = [[element firstChildWithTag:@"updated"] dateValue];
-        _identifier = [[element firstChildWithTag:@"id"] stringValue];
-
-        NSMutableDictionary *links = [NSMutableDictionary dictionary];
-        for (ONOXMLElement *linkElement in [element childrenWithTag:@"link"]) {
-
-            NSString *href = linkElement[@"href"];
-            if (href == nil) {
-                continue;
-            }
-            NSString *rel = linkElement[@"rel"] ? linkElement[@"rel"] : @"";
-            links[rel] = [NSURL URLWithString:href];
-            if ([rel isEqualToString:@""]) {
-                _link = links[rel];
-            }
-        }
-        _links = [links copy];
+        _updated = DLTRSSFeedDateFromElement([element firstChildWithTag:@"pubDate"]);
+        _identifier = [[element firstChildWithTag:@"guid"] stringValue];
+        _link = [NSURL URLWithString:[[element firstChildWithTag:@"link"] stringValue]];
     }
     return self;
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"<%@: %p, id: %@, title: %@, updated: %@, links: %@>",
+    return [NSString stringWithFormat:@"<%@: %p, id: %@, title: %@, updated: %@, link: %@>",
             [self class], self, _identifier, _title, _updated, _link];
 }
 
 @end
 
-@interface DLTAtomFeed ()
+@interface DLTRSSFeed ()
 @property (nonatomic, copy, readonly) ONOXMLDocument *document;
 @end
 
-@implementation DLTAtomFeed
+@implementation DLTRSSFeed
 
 @synthesize title = _title;
 @synthesize subtitle = _subtitle;
@@ -87,10 +86,12 @@
     self = [super init];
     if (self) {
         _document = [document copy];
-        _title = [[document.rootElement firstChildWithTag:@"title"] stringValue];
-        _subtitle = [[document.rootElement firstChildWithTag:@"subtitle"] stringValue];
-        _updated = [[document.rootElement firstChildWithTag:@"updated"] dateValue];
-        _entries = [self entriesFromDocumentElements:[self.document.rootElement childrenWithTag:@"entry"]];
+
+        ONOXMLElement *channel = [self.document.rootElement firstChildWithTag:@"channel"];
+        _title = [[channel firstChildWithTag:@"title"] stringValue];
+        _subtitle = [[channel firstChildWithTag:@"description"] stringValue];
+        _updated = DLTRSSFeedDateFromElement([channel firstChildWithTag:@"lastBuildDate"]);
+        _entries = [self entriesFromDocumentElements:[channel childrenWithTag:@"item"]];
     }
     return self;
 }
@@ -98,7 +99,7 @@
 - (NSArray *)entriesFromDocumentElements:(NSArray *)documentElements {
     NSMutableArray *entries = [NSMutableArray array];
     for (ONOXMLElement *element in documentElements) {
-        DLTAtomFeedEntry *entry = [[DLTAtomFeedEntry alloc] initWithElement:element];
+        DLTRSSFeedEntry *entry = [[DLTRSSFeedEntry alloc] initWithElement:element];
         [entries addObject:entry];
     }
     return [entries copy];

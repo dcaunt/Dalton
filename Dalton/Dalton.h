@@ -21,8 +21,8 @@
 // SOFTWARE.
 
 #ifndef __Dalton__
-    #import "DLTAtomFeed.h"
-    #import "ONOXMLElement+DLTAtomEntry.h"
+    #import "DLTFeed.h"
+    #import "DLTFeedEntry.h"
 
     #define __Dalton__
 #endif
