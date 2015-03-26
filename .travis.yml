@@ -1,7 +1,4 @@
 language: objective-c
-xcode_workspace: Dalton.xcworkspace
-xcode_scheme: Dalton Example
-xcode_sdk: macosx
 
 git:
     submodules: false
@@ -9,3 +6,7 @@ git:
 before_install:
     - sed -i '' 's/git@github.com:/https:\/\/github.com\//' .gitmodules
     - git submodule update --init --recursive
+install:
+    - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
+script:
+    - xcodebuild test -workspace Dalton.xcworkspace -scheme 'Dalton Example' -sdk macosx ONLY_ACTIVE_ARCH=NO | xcpretty -c
