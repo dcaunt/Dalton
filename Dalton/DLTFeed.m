@@ -35,8 +35,7 @@
     return [self feedWithDocument:document];
 }
 
-+ (id<DLTFeed>)feedWithDocument:(ONOXMLDocument *)document
-{
++ (id<DLTFeed>)feedWithDocument:(ONOXMLDocument *)document {
     id<DLTFeed> feed;
     if ([document.rootElement.tag isEqualToString:@"rss"]) {
         feed = [[DLTRSSFeed alloc] initWithDocument:document];

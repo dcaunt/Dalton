@@ -38,8 +38,7 @@
 @synthesize identifier = _identifier;
 @synthesize links = _links;
 
-- (instancetype)initWithElement:(ONOXMLElement *)element
-{
+- (instancetype)initWithElement:(ONOXMLElement *)element {
     self = [super init];
     if (self) {
         _title = [[element firstChildWithTag:@"title"] stringValue];
@@ -48,7 +47,6 @@
 
         NSMutableDictionary *links = [NSMutableDictionary dictionary];
         for (ONOXMLElement *linkElement in [element childrenWithTag:@"link"]) {
-
             NSString *href = linkElement[@"href"];
             if (href == nil) {
                 continue;
@@ -66,7 +64,7 @@
 
 - (NSString *)description {
     return [NSString stringWithFormat:@"<%@: %p, id: %@, title: %@, updated: %@, links: %@>",
-            [self class], self, _identifier, _title, _updated, _link];
+                                      [self class], self, _identifier, _title, _updated, _link];
 }
 
 @end
@@ -82,8 +80,7 @@
 @synthesize updated = _updated;
 @synthesize entries = _entries;
 
-- (instancetype)initWithDocument:(ONOXMLDocument *)document
-{
+- (instancetype)initWithDocument:(ONOXMLDocument *)document {
     self = [super init];
     if (self) {
         _document = [document copy];
@@ -106,7 +103,7 @@
 
 - (NSString *)description {
     return [NSString stringWithFormat:@"<%@: %p, title: %@, subtitle: %@, updated: %@, entries: %@>",
-            [self class], self, _title, _subtitle, _updated, _entries];
+                                      [self class], self, _title, _subtitle, _updated, _entries];
 }
 
 @end

@@ -23,7 +23,7 @@
 #import "DLTRSSFeed.h"
 #import "DLTFeedEntry.h"
 
-static NSDate * DLTRSSFeedDateFromElement(ONOXMLElement *element) {
+static NSDate *DLTRSSFeedDateFromElement(ONOXMLElement *element) {
     static NSDateFormatter *dateFormatter = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -51,8 +51,7 @@ static NSDate * DLTRSSFeedDateFromElement(ONOXMLElement *element) {
 @synthesize identifier = _identifier;
 @synthesize links = _links;
 
-- (instancetype)initWithElement:(ONOXMLElement *)element
-{
+- (instancetype)initWithElement:(ONOXMLElement *)element {
     self = [super init];
     if (self) {
         _title = [[element firstChildWithTag:@"title"] stringValue];
@@ -65,7 +64,7 @@ static NSDate * DLTRSSFeedDateFromElement(ONOXMLElement *element) {
 
 - (NSString *)description {
     return [NSString stringWithFormat:@"<%@: %p, id: %@, title: %@, updated: %@, link: %@>",
-            [self class], self, _identifier, _title, _updated, _link];
+                                      [self class], self, _identifier, _title, _updated, _link];
 }
 
 @end
@@ -81,8 +80,7 @@ static NSDate * DLTRSSFeedDateFromElement(ONOXMLElement *element) {
 @synthesize updated = _updated;
 @synthesize entries = _entries;
 
-- (instancetype)initWithDocument:(ONOXMLDocument *)document
-{
+- (instancetype)initWithDocument:(ONOXMLDocument *)document {
     self = [super init];
     if (self) {
         _document = [document copy];
@@ -107,7 +105,7 @@ static NSDate * DLTRSSFeedDateFromElement(ONOXMLElement *element) {
 
 - (NSString *)description {
     return [NSString stringWithFormat:@"<%@: %p, title: %@, subtitle: %@, updated: %@, entries: %@>",
-            [self class], self, _title, _subtitle, _updated, _entries];
+                                      [self class], self, _title, _subtitle, _updated, _entries];
 }
 
 @end
