@@ -48,7 +48,6 @@
 		BF2C9FF519B9C12A00E4D933 /* Ono.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ono.h; sourceTree = "<group>"; };
 		BF2C9FF619B9C12A00E4D933 /* ONOXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ONOXMLDocument.h; sourceTree = "<group>"; };
 		BF2C9FF719B9C12A00E4D933 /* ONOXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ONOXMLDocument.m; sourceTree = "<group>"; };
-		BF33251019FEDD460066C378 /* news.rss */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = news.rss; sourceTree = "<group>"; };
 		BF33251119FEDECB0066C378 /* DLTRSSFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLTRSSFeed.h; path = ../Dalton/DLTRSSFeed.h; sourceTree = "<group>"; };
 		BF33251219FEDECB0066C378 /* DLTRSSFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DLTRSSFeed.m; path = ../Dalton/DLTRSSFeed.m; sourceTree = "<group>"; };
 		BF79750219C9D83C0049F990 /* DLTFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLTFeed.h; path = ../Dalton/DLTFeed.h; sourceTree = "<group>"; };
@@ -111,7 +110,6 @@
 		BF1A814019B7A2A000946C8D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				BF33251019FEDD460066C378 /* news.rss */,
 				BF1A814119B7A2B100946C8D /* sample.xml */,
 			);
 			name = Resources;
