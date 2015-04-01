@@ -21,7 +21,7 @@
 // SOFTWARE.
 
 #import <Foundation/Foundation.h>
-#import "Ono.h"
+#import <Ono/Ono.h>
 
 @protocol DLTFeed <NSObject>
 

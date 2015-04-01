@@ -1,47 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
-   <Group
-      location = "group:Dalton"
-      name = "Dalton">
-      <FileRef
-         location = "group:Dalton.h">
-      </FileRef>
-      <FileRef
-         location = "group:DLTAtomFeed.h">
-      </FileRef>
-      <FileRef
-         location = "group:DLTAtomFeed.m">
-      </FileRef>
-      <FileRef
-         location = "group:DLTRSSFeed.h">
-      </FileRef>
-      <FileRef
-         location = "group:DLTRSSFeed.m">
-      </FileRef>
-      <FileRef
-         location = "group:DLTFeed.h">
-      </FileRef>
-      <FileRef
-         location = "group:DLTFeed.m">
-      </FileRef>
-      <FileRef
-         location = "group:DLTFeedEntry.h">
-      </FileRef>
-   </Group>
-   <Group
-      location = "group:Ono/Ono"
-      name = "Ono">
-      <FileRef
-         location = "group:Ono.h">
-      </FileRef>
-      <FileRef
-         location = "group:ONOXMLDocument.h">
-      </FileRef>
-      <FileRef
-         location = "group:ONOXMLDocument.m">
-      </FileRef>
-   </Group>
+   <FileRef
+      location = "group:Dalton.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Ono/Ono.xcodeproj">
+   </FileRef>
    <FileRef
       location = "group:Example/Dalton Example.xcodeproj">
    </FileRef>
