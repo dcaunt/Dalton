@@ -7,7 +7,4 @@
    <FileRef
       location = "group:Ono/Ono.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:Example/Dalton Example.xcodeproj">
-   </FileRef>
 </Workspace>
