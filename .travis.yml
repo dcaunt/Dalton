@@ -9,7 +9,7 @@ before_install:
 install:
     - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
 script:
-    - set -o pipefail && xcodebuild test -workspace Dalton.xcworkspace -scheme 'Dalton Example' -sdk macosx ONLY_ACTIVE_ARCH=NO | xcpretty -c
+    - set -o pipefail && xcodebuild clean build -workspace Dalton.xcworkspace -scheme 'Dalton OS X Example' -sdk macosx ONLY_ACTIVE_ARCH=NO | xcpretty -c
     - xcodebuild clean test -workspace Dalton.xcworkspace -scheme 'Dalton Mac' -sdk macosx ONLY_ACTIVE_ARCH=NO | xcpretty -c
     - xcodebuild clean test -workspace Dalton.xcworkspace -scheme 'Dalton iOS' -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
     - pod lib lint --quick

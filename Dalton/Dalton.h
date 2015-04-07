@@ -20,9 +20,13 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-#ifndef __Dalton__
-    #import "DLTFeed.h"
-    #import "DLTFeedEntry.h"
+#import <Foundation/Foundation.h>
 
-    #define __Dalton__
-#endif
+//! Project version number for Dalton.
+FOUNDATION_EXPORT double Dalton_VersionNumber;
+
+//! Project version string for Dalton.
+FOUNDATION_EXPORT const unsigned char Dalton_VersionString[];
+
+#import <Dalton/DLTFeed.h>
+#import <Dalton/DLTFeedEntry.h>

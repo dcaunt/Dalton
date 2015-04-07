@@ -21,7 +21,7 @@
 // SOFTWARE.
 
 #import <Foundation/Foundation.h>
-#import "Dalton.h"
+#import <Dalton/Dalton.h>
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
