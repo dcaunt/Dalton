@@ -24,10 +24,28 @@ for (id<DLTFeedEntry> entry in feed.entries) {
 }
 ```
 
+## Installation
+
+Dalton supports both [CocoaPods](https://cocoapods.org/) and [Carthage](https://github.com/Carthage/Carthage).
+
+### CocoaPods
+
+Add Dalton to your `Podfile`
+```
+pod 'Dalton'
+```
+
+### Carthage
+
+Carthage is supported from version 0.0.3 onwards. Add Dalton to your `Cartfile`.
+```
+github "dcaunt/Dalton"
+```
+
 ## Contact 
 
 [@dcaunt](https://twitter.com/dcaunt)
 
 ## License
 
-MIT. See LICENSE for more details.
+MIT. See [LICENSE](https://github.com/dcaunt/Dalton/blob/master/LICENSE) for more details.
