@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Dalton"
-  s.version          = "0.0.2"
+  s.version          = "0.0.3"
   s.summary          = "A simple RSS & Atom feed parser"
   s.homepage         = "https://github.com/dcaunt/Dalton"
   s.license          = 'MIT'
