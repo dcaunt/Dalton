@@ -1,7 +1,7 @@
 Dalton
 ======
 
-[![Build Status](https://img.shields.io/travis/dcaunt/Dalton.svg)](https://travis-ci.org/dcaunt/Dalton) [![Pod](https://img.shields.io/cocoapods/v/Dalton.svg)](http://cocoapods.org/pods/Dalton)
+[![Pod](https://img.shields.io/cocoapods/v/Dalton.svg)](http://cocoapods.org/pods/Dalton)   [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![Build Status](https://img.shields.io/travis/dcaunt/Dalton.svg)](https://travis-ci.org/dcaunt/Dalton)
 
 A simple RSS & Atom feed parser, built upon [Ono](https://github.com/mattt/Ono).
 
