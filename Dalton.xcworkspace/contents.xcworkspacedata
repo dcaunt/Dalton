@@ -5,6 +5,6 @@
       location = "group:Dalton.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Ono/Ono.xcodeproj">
+      location = "group:Carthage/Checkouts/Ono/Ono.xcodeproj">
    </FileRef>
 </Workspace>
