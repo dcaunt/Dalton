@@ -1,15 +1,5 @@
 language: objective-c
-
-git:
-    submodules: false
-# Use sed to replace the SSH URL with the public URL, then initialize submodules
-before_install:
-    - sed -i '' 's/git@github.com:/https:\/\/github.com\//' .gitmodules
-    - git submodule update --init --recursive
-install:
-    - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
+osx_image: xcode6.4
 script:
-    - set -o pipefail
-    - xcodebuild clean test -workspace Dalton.xcworkspace -scheme 'Dalton Mac' -sdk macosx ONLY_ACTIVE_ARCH=NO | xcpretty -c
-    - xcodebuild clean test -workspace Dalton.xcworkspace -scheme 'Dalton iOS' -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
+    - script/cibuild
     - pod lib lint --quick
